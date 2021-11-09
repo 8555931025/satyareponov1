@@ -1,0 +1,16 @@
+--- # my demo playbook
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          - name: creating a file with ansible playbook
+            file: path=/tmp/sai.txt state=file
+
+            
+          - name: creating a directory with ansible playbook
+            file: path=/tmp/rajdir state=directory
+
+
+          - name: copying a file to hosts
+            copy: src=./jumfile dest=/home/ansible  
